@@ -22,8 +22,8 @@ class Vehiculo
     }
 }
 
-const ferrari = new Vehiculo(1, "Ferrari", "Rojo", "2024", "Nuevo");
-ferrari.arrancar();
+// const ferrari = new Vehiculo(1, "Ferrari", "Rojo", "2024", "Nuevo");
+// ferrari.arrancar();
 
 class Camioneta extends Vehiculo
 {
@@ -48,5 +48,5 @@ class Camioneta extends Vehiculo
     }
 }
 
-const Ford = new Camioneta(2, "Ford", "Azul Oscuro", "2024", "Usada", 250, 4, true);
-Ford.combustible();
+// const Ford = new Camioneta(2, "Ford", "Azul Oscuro", "2024", "Usada", 250, 4, true);
+// Ford.combustible();
