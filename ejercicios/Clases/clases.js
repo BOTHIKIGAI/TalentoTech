@@ -16,74 +16,78 @@
 */
 
 // Clase pricipal
-class Figura{
-    constructor(){
+class Figura {
+  constructor() {}
 
-    }
-
-    // Methods
-    area(){ // Calcular el area de la figura
-        return `El area de la figura es: `;
-    }
-    perimetro(){ // Calcular el perimetro de la figura
-        return `El perimetro de la figura es: `;
-    }
-    descripcion(){ // Descripcion de la figura
-        return `Caracteristicas de figura: `;
-    }
+  // Methods
+  area() {
+    // Calcular el area de la figura
+    return `El area de la figura es: `;
+  }
+  perimetro() {
+    // Calcular el perimetro de la figura
+    return `El perimetro de la figura es: `;
+  }
+  descripcion() {
+    // Descripcion de la figura
+    return `Caracteristicas de figura: `;
+  }
 }
 
 // Clases hijas
-class Cuadrado extends Figura{
-    // Constructor
-    constructor(lado){
-        super();
-        this._lado = lado;
-    }
-    // Get
-    get getLado(){
-        return this._lado;
-    }
-    // Set
-    set setLado(lado){
-        this._lado = lado;
-    }
-    // Override Methods
-    area(){
-        return super.area() + (this._lado * this._lado);
-    }
-    perimetro(){
-        return super.perimetro() + (this._lado * 4);
-    }
-    descripcion(){
-        return super.descripcion() + `Cuadrado con cuatro lados de una longitud de ${this._lado} cm`;
-    }
+class Cuadrado extends Figura {
+  // Constructor
+  constructor(lado) {
+    super();
+    this._lado = lado;
+  }
+  // Get
+  get getLado() {
+    return this._lado;
+  }
+  // Set
+  set setLado(lado) {
+    this._lado = lado;
+  }
+  // Override Methods
+  area() {
+    return super.area() + this._lado * this._lado;
+  }
+  perimetro() {
+    return super.perimetro() + this._lado * 4;
+  }
+  descripcion() {
+    return (
+      super.descripcion() +
+      `Cuadrado con cuatro lados de una longitud de ${this._lado} cm`
+    );
+  }
 }
 
-class Circulo extends Figura{
-    // Constructor
-    constructor(radio){
-        super();
-        this._radio = radio;
-    }
-    // Get
-    get getRadio(){
-        return this._radio;
-    }
-    // Set
-    set setRadio(radio){
-        this._radio=radio;
-    }
-    // Methods
-    area(){
-        return super.area() + (Math.PI * (this._radio*this._radio));
-    }
-    perimetro(){
-        return super.perimetro() + ((Math.PI * 2) * this._radio);
-    }
-    descripcion(){
-        return super.descripcion() + `Circulo con un radio de ${this._radio}`
-    }
+class Circulo extends Figura {
+  // Constructor
+  constructor(radio) {
+    super();
+    this._radio = radio;
+  }
+  // Get
+  get getRadio() {
+    return this._radio;
+  }
+  // Set
+  set setRadio(radio) {
+    this._radio = radio;
+  }
+  // Methods
+  area() {
+    return super.area() + Math.PI * (this._radio * this._radio);
+  }
+  perimetro() {
+    return super.perimetro() + Math.PI * 2 * this._radio;
+  }
+  descripcion() {
+    return super.descripcion() + `Circulo con un radio de ${this._radio}`;
+  }
 }
 
 // Instanciar
