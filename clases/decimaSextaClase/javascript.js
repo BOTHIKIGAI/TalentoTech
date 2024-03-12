@@ -36,51 +36,51 @@ let programadores = [
 
 // for
 
-/* for (let programador of programadores) {
+for (let programador of programadores) {
     console.log("Nombre: " + programador.nombre);
     console.log("Apellido: " + programador.apellido);
     console.log("Edad: " + programador.edad);
     console.log("Correo: " + programador.correo);
     console.log("Área: " + programador.area);
     console.log("------------------------");
-} */
+}
 
 // forEach
-/* programadores.forEach(function(programador) {
+programadores.forEach(function(programador) {
     console.log("Nombre: " + programador.nombre);
     console.log("Apellido: " + programador.apellido);
     console.log("Edad: " + programador.edad);
     console.log("Correo: " + programador.correo);
     console.log("Área: " + programador.area);
     console.log("-----------------------");
-}); */
+});
 
 // forEach con funcion flecha
 
-/* progrmadores.forEach(programador => {
+progrmadores.forEach(programador => {
     console.log("Nombre: " + programador.nombre);
     console.log("Apellido: " + programador.apellido);
     console.log("Edad: " + programador.edad);
     console.log("Correo: " + programador.correo);
     console.log("Área: " + programador.area);
     console.log("-----------------------");
-}); */
+});
 
 // foreach concatenando
-/* progrmadores.forEach (progrmador => {
+progrmadores.forEach (progrmador => {
     console.log('Nombre ' + progrmador.nombre + ' ' + progrmador.apellido 
                 + ' trabaja en el area de ' + progrmador.area);
     console.log("-----------------------");
-}) */
+})
 
 // Almacenar todo lo que se recorrio en un arreglo vacio
-/* let programadorInfo = [];
+let programadorInfo = [];
 programadores.forEach(programador => {
     programadorInfo.push(programador);
 });
-console.log(programadorInfo); */
+console.log(programadorInfo);
 
-/* let programadorInfo = [];
+programadorInfo = [];
 
 programadores.forEach(programador => {
     programadorInfo.push(programador.nombre);
@@ -91,7 +91,7 @@ programadores.forEach(programador => {
 
 });
 
-console.log(programadorInfo); */
+console.log(programadorInfo);
 
 /* MAP */
 let programadoresDuplicado = programadores.map(function(programador){
