@@ -72,7 +72,7 @@ exports.deleteCustomer = async(req, res) => {
     }
 }
 
-exports.updateCustomer = async(req, res) => {
+/* exports.updateCustomer = async(req, res) => {
     try {
         // Data Custoer
         const {name, surname, document, email, cellphone, address} = req.body;
@@ -98,5 +98,19 @@ exports.updateCustomer = async(req, res) => {
     } catch (error) {
         console.log(error);
         res.status(500).send('Was an error to update a customer');
+    }
+} */
+
+exports.updateCustomer = async(req,res) => {
+
+    try {
+        const updateCliente = await Customer.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if(!updateCliente){
+            return res.status(404).send('Customer was not found');
+        }
+        res.json(updateCliente)
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('Was an Error in update customer');
     }
 }
