@@ -72,3 +72,17 @@ exports.deleteCar = async(req, res) => { // Nuevamente una funciónn asincrona l
         console.log('Was an error to delete a car')
     }
 }
+
+/* Update */
+exports.updateCar = async(req, res) => {
+    try {
+        const updateCar = await Car.findByIdAndUpdate(req.params.id, req.body, {new:true});
+        if (!updateCar) {
+            return res.status(404).send('Car was not found')
+        }
+        res.json(updateCar);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({msg:'Was an error to delete a car'});
+    }
+}

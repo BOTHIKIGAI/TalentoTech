@@ -13,6 +13,8 @@ router.post('/add_car', carControllers.addCar); // Router con post ya que se va 
                                                 // addCar
 router.get('/find_all', carControllers.findAll); // Router con get ya que se traera todos los datos encontrados en la base de datos
 router.get('/find_car/:id', carControllers.findCar); // Router con get ya que traera los datos de un carro en base al id
-router.delete('/delete_car/:id', carControllers.deleteCar); // Router delete que pasara el id al controlador para la eliminación carro
+router.delete('/delete_car/:id', carControllers.deleteCar); // Router delete quien resivira el id al para entregarselo 
+                                                            // al controlador para la eliminación carro
+router.patch('/update_car/:id', carControllers.updateCar); // Router patch quien resivira el id para pasarlo al controlador
 
 module.exports = router; // Exportar las rutas
