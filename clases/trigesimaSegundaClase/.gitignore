@@ -1,0 +1,34 @@
+# Archivos y directorios generados por Node.js
+node_modules/
+npm-debug.log
+
+# Archivos de configuración local
+.env
+.env.local
+.env.development
+.env.test
+
+# Archivos de configuración de entorno
+.env.production
+
+# Archivos de configuración de herramientas
+.vscode/
+.idea/
+
+# Archivos de compilación y depuración
+/dist
+/build
+
+# Archivos de logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de depuración de Node.js
+.node_repl_history
+
+# Archivos de configuración de herramientas de desarrollo
+.DS_Store
+Thumbs.db
