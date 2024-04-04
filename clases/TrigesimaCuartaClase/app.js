@@ -1,8 +1,12 @@
 import express from 'express'; // Importando express para el manejo de rutas
 import cors from 'cors'; // Importando cors para el manejo de información entre las rutas
-import conectarDB from './config/db';
+import conectarDB from './config/db.js';
+import citasRoutes from './routes/Routes_Citas.js'
 
 const app = express(); // constante de express para su uso
+app.use(express.json());
+app.use(cors());
+app.use('/citas', citasRoutes)
 
 try {
     await conectarDB.authenticate();
