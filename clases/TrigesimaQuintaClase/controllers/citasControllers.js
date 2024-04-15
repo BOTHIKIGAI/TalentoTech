@@ -55,3 +55,13 @@ export const updateCita = async (req, res) => {
         res.json({ msg: error.message });
     }
 }
+
+// Delete cita
+export const deleteCita = async (req, res) => {
+    try {
+        await Citas.destroy({ where: { id: req.params.id } });
+        res.json({msg:"Cita eliminada exitosamente"});
+    } catch (error) {
+        res.json({ msg: error.message });
+    }
+}
